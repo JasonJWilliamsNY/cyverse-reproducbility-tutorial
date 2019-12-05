@@ -100,6 +100,27 @@
 
    <a href="https://wiki.cyverse.org" target="blank">CyVerse Wiki</a>
 
+.. |Download Docker| raw:: html
+
+   <a href="https://docs.docker.com/v17.09/engine/installation/" target="blank">Download Docker</a>
+
+.. |Install Git| raw:: html
+
+   <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="blank">Install Git</a>
+
+.. |Atom| raw:: html
+
+   <a href="https://atom.io/" target="blank">Atom</a>
+
+.. |Windows Linux Subsystem| raw:: html
+
+   <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="blank">Windows Linux Subsystem</a>
+
+.. |Install Juypyter lab| raw:: html
+
+   <a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html" target="blank">Install Juypyter lab</a>
+
+
 
 .. Comment: images
 

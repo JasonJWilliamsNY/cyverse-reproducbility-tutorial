@@ -1,3 +1,25 @@
+html_theme_options = {
+    'cssfiles': ["http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"]
+}
+
+/*Learning Objectives */
+
+div.admonition-learning-objectives.admonition {
+  background: #e9f2f8;
+  padding: 12px;
+  line-height: 24px;
+}
+
+.rst-content .admonition-learning-objectives .admonition-title {
+ background:#2C80BB;
+
+}
+
+.rst-content .admonition-learning-objectives .admonition-title::before {
+  content: "\f044";
+}
+
+
 /* Table wrapping */
 .wy-table-responsive table td,
 .wy-table-responsive table th {
@@ -73,3 +95,6 @@ div.admonition-sample-data.admonition {
 .rst-content .wy-alert-warning.admonition .admonition-title {
  background:#f07e82;
 }
+
+
+/*Question and answer*/

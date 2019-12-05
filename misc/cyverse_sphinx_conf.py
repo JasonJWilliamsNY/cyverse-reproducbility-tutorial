@@ -9,7 +9,7 @@ extensions = [
     'sphinx.ext.autodoc',
 ]
 
-project = 'YOUR PROJECT NAME HERE as topic_tutorial'
+project = 'CyVerse Reproducibility Tutorial'
 copyright = '2019, CyVerse'
 author = 'CyVerse'
 version = '1.0'
