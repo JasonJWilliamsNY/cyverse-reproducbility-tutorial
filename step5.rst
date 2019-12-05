@@ -12,8 +12,6 @@ Use Jupyter to communicate your results
 **Description:**
 
 In this final step - how you document is up to you:
-..
-	#### Comment: short text description goes here ####
 
 
 *Start Jupyter and begin working through your results*

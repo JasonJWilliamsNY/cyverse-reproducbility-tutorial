@@ -7,7 +7,7 @@
 
 
 Use Biocontainers to assemble your tools
--------------
+------------------------------------------
 
 **Description:**
 
@@ -22,8 +22,8 @@ bioinformatics tools and their dependancies
 We suggest completing the |Creating and Running Docker Containers| tutorial
 before this section, especially if you have not used containers before.
 
-Pipeline Description
-----------------------
+*Pipeline Description*
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 You will have to have some rationale for which tools you use and why. For
 our tutorial example we will perform the following steps with the
@@ -59,8 +59,8 @@ following containers:
       - `docker pull quay.io/biocontainers/quast:5.0.2--py27pl526ha92aebf_0`
 
 
-Exploring containers with Biocontainers
-----------------------------------------
+*Exploring containers with Biocontainers*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once you have identified the container of interest, you need to explore how to
 run the container and the tool itself. For example,let's build a two-step
@@ -109,8 +109,8 @@ we need to mount our local (Atmosphere) disk so that the file can be seen:
    available on biocontainers.
 
 
-Combining Biocontainers in a bash script
-----------------------------------------
+*Combining Biocontainers in a bash script*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ideally, we want to automate how we handle data. One way to automatically
 have our applications work is to develop a scrip. Let's add one more tool
