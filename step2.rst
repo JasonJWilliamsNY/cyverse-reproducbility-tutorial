@@ -92,8 +92,11 @@ of Conda called |MiniConda|.
     bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/conda
 
     #make sure all conda packages will be in path by symbolic links to /bin
+    #this step is a bit of a hack and you may get some warnings about
+    #symbolic links that cannot be created - it's ok.
     ln -s /opt/conda/pkgs/*/bin/* /bin
     ln -s /opt/conda/pkgs/*/lib/* /usr/lib
+
 
 
 
@@ -109,9 +112,9 @@ of Conda called |MiniConda|.
     /opt/conda/bin/conda install -c conda-forge -y jupyterlab=1.2.3
     /opt/conda/bin/conda install -c conda-forge -y nodejs=10.13.0
 
-    python3 -m pip install bash_kernel
-    pip install ipykernel
-    python3 -m bash_kernel.install
+    /opt/conda/bin/pip install bash_kernel
+    /opt/conda/bin/pip install ipykernel
+    /opt/conda/bin/python3 -m bash_kernel.install
     # if the above fails try /opt/conda/bin/conda install -y ipykernel
 
   .. tip::
@@ -132,11 +135,11 @@ of Conda called |MiniConda|.
 
   .. code-block:: bash
 
-    jupyter lab --no-browser --allow-root --ip=0.0.0.0 --NotebookApp.token='' --NotebookApp.password='' --notebook-dir='/scratch/reproducibility-tutorial/'
+    /opt/conda/bin/jupyter lab --no-browser --allow-root --ip=0.0.0.0 --NotebookApp.token='' --NotebookApp.password='' --notebook-dir='/scratch/reproducibility-tutorial/'
 
 3. You can access your Jupyter lab session by opening a web browser and
    entering the IP address of your Atmosphere instance followed by `:8888`
-   (e.g. 123.45.67:8888)
+   (e.g. 123.45.67:8888) (press CNTL+C to shutdown/exit)
 
 
 *Install and test snakemake*
@@ -147,9 +150,16 @@ Next we will use conda to |install snakemake|
 
   .. code-block:: bash
 
+    # See what snakemake version are available
     /opt/conda/bin/conda search -c bioconda snakemake
 
+    # Let's choose the 5.8.1.
     /opt/conda/bin/conda install -c bioconda -c conda-forge -y snakemake=5.8.1
+
+    # hack conda again
+
+    ln -s /opt/conda/bin/* /bin
+    ln -s /opt/conda/lib/* /usr/lib
 
     # verify the installation
     snakemake --version
@@ -165,6 +175,7 @@ We will |install Docker| as recommended for Linux:
     sudo apt-get update
 
     # install some needed packages
+    # It's ok to say yes to any warnings
     sudo apt-get install -y \
     apt-transport-https \
     ca-certificates \
@@ -282,8 +293,8 @@ we will get to those steps shortly. For now, let's get the metadata from
 our SRA experiment. Unfortunately, SRA does not have a way to automatically
 do this, so we will we go to the **SRA Run Selector** for the chosen sample data.
 
-1. Go to |SRA Study SRP170758| and click on `RunInfo Table` and save the table
-   (text file) to your computer.
+1. Go to |SRA Study SRP170758| and click on `Metadata` to download
+   `SraRunTable.txt` and save the table (text file) to your computer.
 
 We will use |scp| to copy the SraRunTable.txt from our local system to our
 Atmosphere instance (If you are using Widows and don't have
