@@ -359,7 +359,7 @@ with a note about the metadata).
      git status
 
      #If you created Jupyter notebooks .ipnyb files or a
-     # ``.ipynb_checkpoints/` directory delete these
+     # `.ipynb_checkpoints/` directory delete these
 
      # add the experiment directory to version control
      git add experiment/
