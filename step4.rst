@@ -333,6 +333,15 @@ and discuss the key features:
 
      snakemake --cores all
 
+  .. tip::
+
+     **Use `tmux`**
+
+     Since we happen to be working on the cloud, you may want to
+     walk away from an ssh session and have your work run without
+     being connected (e.g. you want to close your laptop). You
+     can use a tool like `tmux` to do that. See this |tmux tutorial|.
+
 
   .. admonition:: Discussion - Parallelism
 
@@ -346,7 +355,7 @@ and discuss the key features:
     snakemake --dag | dot -Tpng > dag.png
 
 
-*Document your works*
+*Document your work*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. As previously, you should copy your results to CyVerse and commit
@@ -411,3 +420,7 @@ Search for an answer:
 .. |Snakemake grammar|  raw:: html
 
    <a href="https://snakemake.readthedocs.io/en/stable/snakefiles/writing_snakefiles.html" target="blank">Snakemake grammar</a>
+
+.. |tmux tutorial|  raw:: html
+
+   <a href="https://thoughtbot.com/blog/a-tmux-crash-course" target="blank">tmux tutorial</a>
