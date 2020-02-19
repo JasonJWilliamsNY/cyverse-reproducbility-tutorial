@@ -126,7 +126,9 @@ command should work.
        trimming when average quality is less than 30 (phred score).
        Use up 8 threads and single-end mode.
 
-       `quay.io/biocontainers/trimmomatic:0.39--1`
+       .. code-block:: bash
+
+            quay.io/biocontainers/trimmomatic:0.39--1
 
        .. admonition:: Answer
 
