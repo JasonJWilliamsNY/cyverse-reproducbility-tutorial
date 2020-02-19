@@ -327,7 +327,9 @@ and discuss the key features:
             "--circos "
             "{params.container_input}"
 
-2. In the snakemake folder you can run this job
+2. In the snakemake folder you can run this job (warning,
+   even using only one SRA input, this can take an hour
+   or more to complete). 
 
    .. code-block:: language
 
