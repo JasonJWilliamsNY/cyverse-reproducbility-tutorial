@@ -380,10 +380,10 @@ with a note about the metadata).
       iinit
 
       #make a directory
-      imkdir reproducbility_tutorial
+      imkdir reproducibility_tutorial
 
       # copy files
-      iput -rPV /scratch/reproducibility-tutorial reproducbility_tutorial_dev
+      iput -rPV /scratch/reproducibility-tutorial reproducibility_tutorial
 
    .. note::
 
