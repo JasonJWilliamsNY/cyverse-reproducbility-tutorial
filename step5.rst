@@ -21,7 +21,17 @@ In this final step - how you document is up to you:
 
   .. code-block:: bash
 
-    jupyter lab --no-browser --allow-root --ip=0.0.0.0 --NotebookApp.token='' --NotebookApp.password='' --notebook-dir='/scratch/reproducibility-tutorial/'
+    /opt/conda/bin/jupyter lab --no-browser --allow-root --ip=0.0.0.0 --NotebookApp.token='' --NotebookApp.password='' --notebook-dir='/scratch/reproducibility-tutorial/'
+
+
+  .. admonition:: Exercise
+
+     The 5.10 version of snakemake has integration with Jupyter.
+     how can you use this to blend the two? Install the new
+     version of snakemake and try, see the |snakemake docs|
+     for information on the notebook integration.
+
+
 
 
 ----
@@ -67,3 +77,7 @@ Search for an answer:
 .. |Github Repo Link|  raw:: html
 
    <a href="https://github.com/JasonJWilliamsNY/cyverse-reproducbility-tutorial" target="blank">Github Repo Link</a>
+
+.. |snakemake docs|  raw:: html
+
+   <a href="https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#jupyter-notebook-integration" target="blank">snakemake docs</a>
