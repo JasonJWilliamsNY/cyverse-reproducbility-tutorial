@@ -79,7 +79,9 @@ the first step of our workflow.
 
    .. code-block:: bash
 
-     snakemake Snakefile
+     # This assumes you are in a directory with
+     # a file `Snakefile`
+     snakemake -s Snakefile
 
 
 When run we get some helpful outputs:
@@ -145,7 +147,7 @@ First, let's set up our workflow in our tutorial folder
 
    .. code-block:: bash
 
-      mkdir /scratch/reproducibility-tutorial/snakemake
+      mkdir -p /scratch/reproducibility-tutorial/snakemake
 
 
 Here is a much more advanced, fully assembled workflow. We will walk through
@@ -153,8 +155,8 @@ and discuss the key features:
 
    .. code-block:: python
 
-         #SRA definitions
-    ACCESSION=["SRR8245081"]
+    #SRA definitions
+    ACCESSION=["SRR8245081",]
     READS=["_1","_2"]
     REFERENCE_URLS=["ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/002/765/GCF_000002765.4_ASM276v2/GCF_000002765.4_ASM276v2_genomic.fna.gz",
                     "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/002/765/GCF_000002765.4_ASM276v2/GCF_000002765.4_ASM276v2_genomic.gff.gz"]
