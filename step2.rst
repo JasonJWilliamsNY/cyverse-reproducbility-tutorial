@@ -341,8 +341,7 @@ PuTTY project.
        # complete the path you have described
 
        mkdir -p /scratch/reproducibility-tutorial/experiment/sra_files/metadata
-       mv SraRunTable.txt experiment/sra_files/metadata/
-
+       mv SraRunTable.txt /scratch/reproducibility-tutorial/experiment/sra_files/metadata
 
 *Commit to GitHub and copy your work to the Data Store*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
